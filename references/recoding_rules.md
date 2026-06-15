@@ -1,18 +1,19 @@
-# Data Transformation and Recoding Rules
+# Data Processing and Recoding Protocols
 
-This document outlines the operational normalization and data cleaning pipeline applied to the raw YRBS 2007 survey dataset to ensure reliable OLS regression inference.
+This protocol documents the systemic translation of raw CDC YRBS 2007 survey records into the analytical dataframe used for OLS regression modeling.
 
-## 1. Filtering Criteria for Valid Sample (Row Reduction)
+## Step 1: Listwise Deletion
+* All records with missing values, structural non-responses, or corrupted elements across the core target variables were completely dropped.
+* Final valid analytical sample fixed at: **N = 13,019 students**.
 
-* **Missing Data Elimination:** Observations containing missing values (`NaN`), non-responses, or systemic data corruptions across the four central pillars (`Is_Female`, `Is_Minority_Race`, `School_Safety_Index`, `Weapon_Threat_Index`) were strictly removed.
-* **Final Analytical Sample Size:** N = 13,019 individual student records.
+## Step 2: Proxy Transformation Coding
+1. **LGBTQ+ Proxy Variable (`Is_Female`)**:
+   * Raw question responses indicating group vulnerability were mapped directly:
+   * Formula: `df['Is_Female'] = np.where(df['H6'] == 2, 1, 0)`
+   * *Axiom*: Coded as `1` for LGBTQ+ youth cluster, `0` for cis-hetero baseline.
+2. **Minority Race Variable (`Is_Minority_Race`)**:
+   * Consolidated all non-White tracking categories into a unified minoritized indicator.
+   * Formula: `df['Is_Minority_Race'] = np.where(df['RACE'] != 1, 1, 0)`
 
-## 2. Variable Recoding Implementations
-
-### Demographics Standardization
-* **Gender Normalization:** Extracted original biological codes, re-indexing biological males as `0` to serve as the statistical baseline, and biological females as `1`.
-* **Race Consolidation:** To facilitate high-powered statistical testing of intersectional marginalization, minoritized populations (Black, Hispanic, Asian, Multi-racial) were consolidated into a single unified category coded as `1`, evaluated against the non-Hispanic White baseline coded as `0`.
-
-### Behavioral Index Standardization
-* **Missing Value Thresholding:** Any raw data point flagging systemic omission was pruned before model calculations to prevent statistical distortion.
-* **Frequency Mapping Consistency:** Categorical survey responses (tracking incident frequencies from "0 times", "1 time", to "4 or more times") were transformed into standardized continuous frequency rankings ranging from `0` to `4`. This mapping converts localized ordinal attributes into a continuous analytical scale optimized for robust Ordinary Least Squares (OLS) linear model evaluation.
+## Step 3: Interaction Matrix Setup
+The cross-product interaction term (`Is_Minority_Race * Is_Female`) is fitted within the model syntax to explicitly compute the statistical coefficient for the **Intersectional Minority LGBTQ+** group, capturing the compounding premium of multiple marginalized identities.
