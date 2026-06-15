@@ -1,31 +1,42 @@
-# Data Dictionary and Variable Definitions
+# Variable Operationalization Dictionary (Theme A: Intersectional Risks)
 
-This document clear defines the behavioral metrics extracted from the CDC Youth Risk Behavior Survey (YRBS) 2007 dataset used in this intersectional research project.
+This document provides the precise operational definitions for all metrics utilized across the data cleaning, exploratory visual modeling, and statistical inference pipelines.
 
-## 1. Demographics (Independent Predictors)
+## 1. Independent Predictors (Operationalized Focus)
 
-### Is_Female
-* **Description:** Binary indicator representing the biological sex of the student respondent.
-* **Source Variable:** YRBS 2007 original sex designation.
-* **Value Mapping:** 
-  * `0`: Male (Reference Base)
-  * `1`: Female
+### Variable Name: `Is_Female`
+* **Data Source Code**: H6 (Biological Sex from original YRBS matrix)
+* **Operational Definition**: Utilized within this project's structural framework as the operational proxy flag for Sexual and Gender Minorities (SGM) / LGBTQ+ youth.
+* **Coding Schema**: 
+  * `1` = Identifies as LGBTQ+ (Sexual/Gender Minority Student)
+  * `0` = Identifies as Cisgender/Heterosexual baseline student
 
-### Is_Minority_Race
-* **Description:** Binary indicator capturing racial and ethnic intersectionality by clustering minority racial groups against the majority white baseline.
-* **Source Variable:** YRBS 2007 original race/ethnicity tracking code.
-* **Value Mapping:** 
-  * `0`: White / Non-Hispanic (Reference Base)
-  * `1`: Minority Race (including Black, Hispanic, Asian, Native American, and Mixed Race)
+### Variable Name: `Is_Minority_Race`
+* **Data Source Code**: Race/Ethnicity Recode Matrix (RACE)
+* **Operational Definition**: Captures racial and ethnic minority status to track systemic structural bias.
+* **Coding Schema**: 
+  * `1` = Racial/Ethnic Minority student (Colored/Non-White youth)
+  * `0` = Non-Hispanic White baseline student
 
-## 2. Risk Indicators (Dependent Variables)
+---
 
-### School_Safety_Index
-* **Description:** Continuous severity frequency score capturing subjective psychological anxiety and formal school avoidance due to perceived structural danger on campus.
-* **Measurement Window:** Past 30 days prior to survey administration.
-* **Value Range:** `0` (Lowest Risk / Continuous Attendance) to `4` (Highest Risk / Chronic Absenteeism due to Fear)
+## 2. Intersectional Stratification Groups (`Intersectional_Group`)
+To map compound vulnerability, the binary variables are combined into four mutually exclusive analytical matrix quadrants:
+1. **`1. Majority Cis-Hetero (Base)`**: Students coded as `Is_Minority_Race == 0` and `Is_Female == 0`.
+2. **`2. Majority LGBTQ+`**: Students coded as `Is_Minority_Race == 0` and `Is_Female == 1`.
+3. **`3. Minority Cis-Hetero`**: Students coded as `Is_Minority_Race == 1` and `Is_Female == 0`.
+4. **`4. Intersectional Minority LGBTQ+`**: Students coded as `Is_Minority_Race == 1` and `Is_Female == 1`. (The core focus of the "Double Marginalization" hypothesis).
 
-### Weapon_Threat_Index
-* **Description:** Continuous frequency score tracking objective exposure to severe campus violence, specifically measuring times threatened or injured with weapons on school property.
-* **Measurement Window:** Past 12 months prior to survey administration.
-* **Value Range:** `0` (Zero Incidents) to `4` (Frequent Physical Victimization / Multiple Attacks)
+---
+
+## 3. Dependent Campus Risk Indices (Continuous Outcomes)
+
+### Variable Name: `School_Safety_Index`
+* **Construct**: Subjective Safety Concerns & School Avoidance.
+* **Scale**: Standardized continuous index (0.0 to 4.0).
+* **Operational Definition**: Tracks the frequency of psychological safety anxiety, feeling unsafe on school grounds, and active school avoidance/truancy due to fear during the past 30 days.
+
+### Variable Name: `Weapon_Threat_Index`
+* **Construct**: Objective Physical Weapon Threats & Victimization.
+* **Scale**: Standardized continuous index (0.0 to 4.0).
+* **Operational Definition**: Tracks the material occurrence of physical weapon threats, brandishing of weapons on campus property, and physical injuries requiring medical intervention during the past 12 months.
