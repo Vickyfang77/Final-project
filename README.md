@@ -3,7 +3,7 @@ Name: 彭鈺芳 (Vickyfang77)
 Student ID: 113370218
 
 ## Project Repository
-https://github.com/[[請在此處填寫你的GitHub倉庫連結]](https://github.com/Vickyfang77/Final-project)
+https://github.com/https://github.com/Vickyfang77/Final-project
 
 ## Presentation Video
 https://youtube.com/[請在此處填寫你的YouTube影片連結]
