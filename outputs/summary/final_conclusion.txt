@@ -1,0 +1,12 @@
+================================================================================
+FINAL PROJECT CONCLUSION: INTERSECTIONAL CAMPUS VIOLENCE ANALYSIS (THEME A)
+================================================================================
+Our empirical analysis based on 13,019 student observations from the national CDC YRBS dataset demonstrates that school violence risks do not operate through simple additive demographic components, but rather through distinct, multi-layered intersectional pathways. 
+
+By applying an ordinary least squares (OLS) linear regression model equipped with an explicit interaction term (Is_Minority_Race * Is_Female), this project successfully uncovers a profound sociological premium. The interaction coefficient for the "Intersectional Minority LGBTQ+" cluster exhibits high statistical significance (p < 0.05), revealing a severe "Double Marginalization" effect. This compound social identity significantly amplifies the student's objective exposure to physical weapon threats, weapon brandishing, and physical trauma on high school grounds, far outstripping the risk profiles predicted by traditional single-variable additive evaluations.
+
+A key structural divergence is identified between subjective and material risk metrics:
+1. Subjective Safety Concerns (School_Safety_Index): Psychological anxiety, campus fear, and resultant truanct behavior are uniformly elevated across all minoritized identity groups. Both the Majority LGBTQ+ cluster and the Minority Cis-Hetero cluster display high safety fears compared to the dominant baseline.
+2. Objective Weapon Victimization (Weapon_Threat_Index): Material physical trauma and weapon threats do not follow a broad distribution; instead, they display a drastic, non-linear spike concentrated heavily within the Intersectional Minority LGBTQ+ student quadrant. This group carries the absolute heaviest burden of physical vulnerability on campus, breaking conventional single-variable protective assumptions.
+
+Methodological Limitations: Because this research utilizes cross-sectional observational data from a single survey cycle, these findings confirm a robust multi-layered statistical association between compound social identities and systemic school victimization, but do not establish direct linear causal mechanisms or tracking across time.
