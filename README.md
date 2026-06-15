@@ -2,6 +2,12 @@
 
 This research project evaluates the multi-layered nature of high school campus violence in the United States using an intersectional framework. Utilizing a national sample from the CDC Youth Risk Behavior Survey (YRBS) 2007, this study transitions past single-variable analysis to explore how biological sex and minority race interact to influence subjective school safety and objective weapon victimization.
 
+**Presentation Video Link**- https://www.youtube.com/watch?v=ZjjMDCqRJbA
+
+## Student Information
+**Name:彭鈺芳(Vickyfang77)**
+**Student ID:113370218**
+
 ## Project Abstract (專案摘要)
 
 Traditional sociological studies often isolate race and gender when monitoring youth risk behaviors. This project applies an intersectional framework to evaluate how structural vulnerability operates across compounding identities. Our empirical results from Ordinary Least Squares (OLS) regression models uncover an intersectional premium: minoritized female youth suffer disproportionately higher frequencies of objective weapon threats and physical injuries on school grounds than traditional additive models predict.
