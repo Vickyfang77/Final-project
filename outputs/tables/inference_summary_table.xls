@@ -1,0 +1,9 @@
+Predictor/Variable,Model,Coefficient (B),Std.Error,t-Statistic,p-Value
+Baseline Reference Group: Majority Cis-Hetero Cluster,Model 1: Safety Concerns,2.009661825199869,0.017946980277788117,111.97771402730658,0.0
+Minority Race/Color Main Effect (Structural Bias Indicator),Model 1: Safety Concerns,-0.04837598758376001,0.02849077619204173,-1.6979526025434426,0.08953887239013716
+Sexual Minority / LGBTQ+ Main Effect (Proxy Operational Indicator),Model 1: Safety Concerns,-0.04905186473909733,0.025288779899336204,-1.9396690917613182,0.05243992534764581
+Intersectional Minority LGBTQ+ Premium (Interaction Term / Double Marginalization),Model 1: Safety Concerns,0.09906141226078105,0.03977773304349512,2.490373499979548,0.01277236378674224
+Baseline Reference Group: Majority Cis-Hetero Cluster,Model 2: Weapon Threats,2.018496907440834,0.017974587186930666,112.2972609300582,0.0
+Minority Race/Color Main Effect (Structural Bias Indicator),Model 2: Weapon Threats,-0.003911898641779838,0.028534602075703498,-0.13709315558007104,0.8909591286240908
+Sexual Minority / LGBTQ+ Main Effect (Proxy Operational Indicator),Model 2: Weapon Threats,-0.011474320181724215,0.025327680318136512,-0.4530347839832669,0.6505306968118962
+Intersectional Minority LGBTQ+ Premium (Interaction Term / Double Marginalization),Model 2: Weapon Threats,0.0030014763246970153,0.0398389210676101,0.0753403015007171,0.9399450302524985
