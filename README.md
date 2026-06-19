@@ -7,7 +7,7 @@ Student ID: 113370218
 https://github.com/Vickyfang77/Final-project
 
 ## Presentation Video
-https://youtube.com/https://youtu.be/2qV9T7Ehx4k
+[https://youtube.com/https://youtu.be/2qV9T7Ehx4k](https://youtu.be/2qV9T7Ehx4k)
 
 # The Price of "Double Marginalization": Intersectional Violence Risks Faced by LGBTQ+ and Minority Youth (「雙重邊緣化」的代價：探討少數族群在校園中所承受的交織性暴力風險)
 
